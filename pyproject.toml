@@ -8,11 +8,25 @@ dependencies = []
 [dependency-groups]
 dev = [
     "ruff",
+    "mypy",
 ]
 
 [tool.ruff]
 line-length = 120
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I"]
+select = ["E", "F", "W", "I", "S113", "S605", "S607", "S608"]
 ignore = ["E203", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+# Per-module overrides for libraries with broken or missing stubs.
+# Add entries like:
+# [[tool.mypy.overrides]]
+# module = ["some_lib.*"]
+# ignore_errors = true
