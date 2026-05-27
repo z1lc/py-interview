@@ -1,0 +1,18 @@
+[project]
+name = "py-interview"
+version = "0.1.0"
+description = "minimal setup for an interview in Python"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E203", "E501"]
