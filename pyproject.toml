@@ -9,6 +9,7 @@ dependencies = []
 dev = [
     "ruff",
     "mypy",
+    "pytest>=9.0.3",
 ]
 
 [tool.ruff]
@@ -24,3 +25,7 @@ ignore = ["E203", "E501"]
 [tool.mypy]
 disallow_untyped_defs = true
 ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
