@@ -3,13 +3,18 @@ name = "py-interview"
 version = "0.1.0"
 description = "minimal setup for an interview in Python"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "python-dateutil>=2.9.0.post0",
+    "sortedcontainers>=2.4.0",
+]
 
 [dependency-groups]
 dev = [
     "ruff",
     "mypy",
     "pytest>=9.0.3",
+    "sortedcontainers-stubs>=2.4.3",
+    "types-python-dateutil>=2.9.0.20260518",
 ]
 
 [tool.ruff]
