@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "minimal setup for an interview in Python"
 requires-python = ">=3.13"
 dependencies = [
+    "hypothesis>=6.154.1",
+    "more-itertools>=11.1.0",
+    "portion>=2.6.1",
     "python-dateutil>=2.9.0.post0",
     "sortedcontainers>=2.4.0",
 ]
@@ -15,6 +18,7 @@ dev = [
     "pytest>=9.0.3",
     "sortedcontainers-stubs>=2.4.3",
     "types-python-dateutil>=2.9.0.20260518",
+    "hypothesis>=6.154.1",
 ]
 
 [tool.ruff]
